@@ -140,7 +140,7 @@ public class ExpressionTransform {
           result = exp.getValue(evaluationContext);
         }
       } catch (Exception e) {
-        log.info("Failed to evaluate {}, returning raw value {}", source, e.getMessage());
+        log.info("Failed to evaluate {}, returning raw value {}", source, e.getMessage(), e);
         exception = e;
       } finally {
         Set keys = getKeys(source, additionalContext);
